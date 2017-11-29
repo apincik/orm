@@ -143,6 +143,7 @@ class ModifierParser
 		$result = [];
 		$iterator->position++;
 		while (isset($iterator->tokens[$iterator->position])) {
+			/** @var int|null $type */
 			list($value, , $type) = $iterator->currentToken();
 
 			if ($type === self::TOKEN_RBRACKET) {

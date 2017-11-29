@@ -1,9 +1,5 @@
 parameters:
 	ignoreErrors:
-		# https://github.com/phpstan/phpstan/issues/231
-		- '#Call to an undefined method Nextras\\Orm\\Mapper\\Dbal\\IPersistAutoupdateMapper::processAutoupdate\(\)#'
-		- '#Call to an undefined method Nextras\\Orm\\Mapper\\Dbal\\DbalMapper::getAutoupdateReselectExpression\(\)#'
-		- '#Method Nextras\\Orm\\Collection\\EntityIterator::current\(\) should return Nextras\\Orm\\Entity\\IEntity|null but returns Nextras\\Orm\\Entity\\IEntity|Nextras\\Orm\\Entity\\IEntityHasPreloadContainer#'
 		# missing phpstan-nette extension, not supported for phpstan-shim yet
 		- '#Call to an undefined method Nextras\\Orm\\Model\\Model::onFlush\(\)#'
 		- '#Call to an undefined method Nextras\\Orm\\Repository\\Repository::onFlush\(\)#'
@@ -11,3 +7,5 @@ parameters:
 		- '#Accessing property \$\w+ on possibly null value of type Nextras\\Orm\\Entity\\Reflection\\PropertyRelationshipMetadata\|null#'
 		# https://github.com/phpstan/phpstan/issues/587
 		- '#Constructor of class Nextras\\Orm\\Bridges\\NetteDI\\DIRepositoryFinder has an unused parameter \$modelClass\.#'
+		# https://github.com/phpstan/phpstan/issues/637
+		- '#Cannot call static method getEntityClassNames\(\) on  Nextras\\Orm\\Repository\\IRepository\|string\.#'

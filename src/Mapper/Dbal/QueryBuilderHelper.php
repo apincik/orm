@@ -172,6 +172,7 @@ class QueryBuilderHelper
 
 			$sourceAlias = $targetAlias;
 			$sourceMapper = $targetMapper;
+			assert($sourceMapper instanceof DbalMapper);
 			$sourceReflection = $targetReflection;
 			$sourceEntityMeta = $targetEntityMetadata;
 		}
